@@ -1,56 +1,35 @@
-import { Form, Input, Button } from "antd";
 import { useMutation } from "@tanstack/react-query";
+import { Button, Form, Input } from "antd";
 import axios from "axios";
 import toast from "react-hot-toast";
 
-const StoryForm = () => {
-  const mutation = useMutation({
-    mutationFn: async (data: any) => {
-      const res = await axios.post("http://localhost:3000/products", data);
-
-      return res.data;
+export default function StoryForm() {
+  const { mutate, isPending, isSuccess } = useMutation({
+    mutationFn: async (values: any) => {
+      await axios.post("http://localhost:3000/stories", values);
     },
-
     onSuccess: () => {
-      toast.success("Thêm truyện thành công");
+      toast.success("Story created successfully!");
     },
-
     onError: () => {
-      toast.error("Có lỗi xảy ra");
+      toast.error("Failed to create story.");
     },
   });
 
   const onFinish = (values: any) => {
-    mutation.mutate(values);
+    mutate(values);
   };
-
   return (
-    <Form layout="vertical" onFinish={onFinish} style={{ maxWidth: 500 }}>
-      <Form.Item
-        label="Tên truyện"
-        name="title"
-        rules={[{ required: true, message: "Nhập tên truyện" }]}
-      >
-        <Input />
+    <Form layout="vertical" onFinish={onFinish}>
+      <Form.Item label="Title" name="title">
+        <Input placeholder="title" />
       </Form.Item>
-
-      <Form.Item label="Tác giả" name="author">
-        <Input />
-      </Form.Item>
-
-      <Form.Item label="Image URL" name="image">
-        <Input />
-      </Form.Item>
-
-      <Form.Item label="Mô tả" name="description">
-        <Input.TextArea rows={4} />
-      </Form.Item>
-
-      <Button type="primary" htmlType="submit" loading={mutation.isPending}>
-        Thêm truyện
+      <Button htmlType="submit" loading={isPending} type="primary">
+        Submit
       </Button>
+      {isSuccess && (
+        <div style={{ color: "green" }}>Story created successfully!</div>
+      )}
     </Form>
   );
-};
-
-export default StoryForm;
+}
