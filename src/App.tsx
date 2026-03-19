@@ -5,6 +5,8 @@ import { Layout } from "antd";
 import LoginForm from "./components/LoginForm";
 import Lab1 from "./pages/lab1";
 import Lab2 from "./pages/lab2";
+import Lab4 from "./pages/lab4";
+import { StoryList } from "./pages/lab5";
 
 const columns = [
   { title: "Name", dataIndex: "name"},
@@ -87,6 +89,7 @@ function App() {
         
         <Route path="/" element={
           
+          
           <div className="max-w-6xl mx-auto mt-10 px-4 text-center">
             <Table columns={columns} dataSource={data} pagination={{pageSize: 2}}/>
             <h1 className="text-4xl font-bold mb-4">Chào mừng đến với WEB2091</h1>
@@ -96,14 +99,19 @@ function App() {
             <Link to="/lab2">
               <Button type="default">Lab2</Button>
             </Link>
+            <Link to="/lab4">
+              <Button type="dashed">Lab4</Button>
+            </Link>
             <Button type="default">Click me</Button>
             <Button type="dashed">Click me</Button>
             <Button type="link">Click me</Button>
             <Button type="text">Click me</Button>
+            <StoryList />
           </div>
         } />
         <Route path="/lab1" element={<Lab1 />} />
         <Route path="/lab2" element={<Lab2 />} />
+        <Route path="/lab4" element={<Lab4 />} />
         <Route path="/login" element={<LoginForm />} />
         <Route path="/form" element={<FormPage />} />
       </Routes>

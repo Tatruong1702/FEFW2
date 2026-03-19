@@ -1,4 +1,55 @@
 {
+  "stories": [
+    {
+      "id": 1,
+      "title": "The Tortoise and the Hare",
+      "author": "Aesop",
+      "content": "Once upon a time",
+      "image": "https://media-cdn-v2.laodong.vn/storage/newsportal/2023/8/26/1233821/Giai-Nhi-1--Nang-Tre.jpg",
+      "createdAt": "2023-08-26T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "title": "The Boy Who Cried Wolf",
+      "author": "Tạ Văn Trường",
+      "content": "Once upon a time",
+      "image": "https://media-cdn-v2.laodong.vn/storage/newsportal/2023/8/26/1233821/Giai-Nhi-1--Nang-Tre.jpg",
+      "createdAt": "2023-08-26T10:00:00Z"
+    },
+    {
+      "id": 3,
+      "title": "The Fox and the Grapes",
+      "author": "Aesop",
+      "content": "Once upon a time",
+      "image": "https://media-cdn-v2.laodong.vn/storage/newsportal/2023/8/26/1233821/Giai-Nhi-1--Nang-Tre.jpg",
+      "createdAt": "2023-08-26T10:00:00Z"
+    },
+    {
+      "id": 4,
+      "title": "The Ant and the Grasshopper",
+      "author": "Aesop",
+      "content": "Once upon a time",
+      "image": "https://media-cdn-v2.laodong.vn/storage/newsportal/2023/8/26/1233821/Giai-Nhi-1--Nang-Tre.jpg",
+      "createdAt": "2023-08-26T10:00:00Z"
+    },
+    {
+      "id": 5,
+      "title": "The Lion and the Mouse",
+      "author": "Aesop",
+      "content": "Once upon a time",
+      "image": "https://media-cdn-v2.laodong.vn/storage/newsportal/2023/8/26/1233821/Giai-Nhi-1--Nang-Tre.jpg",
+      "createdAt": "2023-08-26T10:00:00Z"
+    },
+    {
+      "id": 6,
+      "title": "The Dog and the Shadow",
+      "author": "Aesop",
+      "content": "Once upon a time",
+      "image": "https://media-cdn-v2.laodong.vn/storage/newsportal/2023/8/26/1233821/Giai-Nhi-1--Nang-Tre.jpg",
+      "createdAt": "2023-08-26T10:00:00Z"
+    }
+
+  ],
   "products": [],
   "users": []
 }
