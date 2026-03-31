@@ -10,6 +10,7 @@ export function StoryList() {
             return res.data;
         },
     });
+    
     const qc = useQueryClient();
     const handleDelete = async (id: number) => {
         await axios.delete(`http://localhost:3000/stories/${id}`);

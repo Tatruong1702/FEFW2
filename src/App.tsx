@@ -3,6 +3,7 @@ import { Link, Routes, Route } from "react-router-dom";
 import { Button, Table } from "antd";
 import { Layout } from "antd";
 import LoginForm from "./components/LoginForm";
+import UserHeader from "./components/Header";
 import Lab1 from "./pages/lab1";
 import Lab2 from "./pages/lab2";
 import Lab4 from "./pages/lab4";
@@ -91,6 +92,7 @@ function App() {
           
           
           <div className="max-w-6xl mx-auto mt-10 px-4 text-center">
+            <UserHeader />
             <Table columns={columns} dataSource={data} pagination={{pageSize: 2}}/>
             <h1 className="text-4xl font-bold mb-4">Chào mừng đến với WEB2091</h1>
             <Link to="/lab1">
